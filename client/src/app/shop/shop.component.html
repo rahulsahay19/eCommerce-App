@@ -11,7 +11,7 @@
             <ul class="list-group my-3">
                 <li class="list-group-item" 
                     *ngFor="let brand of brands"
-                    [class.active]="brand.id === this.brandIdSelected"
+                    [class.active]="brand.id === this.shopParams.brandId"
                     [value]="brand.id"
                     (click)="onBrandSelected(brand.id)"
                 >
@@ -23,7 +23,7 @@
               <ul class="list-group my-3">
                 <li class="list-group-item"
                     *ngFor="let type of types"
-                    [class.active]="type.id === this.typeIdSelected"
+                    [class.active]="type.id === this.shopParams.typeId"
                     [value]="type.id"
                     (click)="onTypeSelected(type.id)"
                 >
@@ -35,13 +35,17 @@
 
         <section class="col-9">
             <div class="d-flex justify-content-between align-items-center pb-2">
-                <header>
-                    <span>Showing <strong>10</strong> of <strong>15</strong> Results</span>
-                </header>
-                <div class="form-inline mt-2">
-                    <input class="form-control mr-2" style="width:300px" placeholder="Search" type="text">
-                    <button class="btn btn-outline-primary my-2">Search</button>
-                    <button class="btn btn-outline-success ml-2 my-2">Reset</button>
+
+            <app-paging-header
+                [totalCount]="totalCount"
+                [pageSize]="this.shopParams.pageSize"
+                [pageNumber]="this.shopParams.pageNumber">
+            </app-paging-header>
+
+                   <div class="form-inline mt-2">
+                    <input (keyup.enter)="onSearch()" class="form-control mr-2" #search style="width:300px" placeholder="Search" type="text">
+                    <button (click)="onSearch()" class="btn btn-outline-primary my-2">Search</button>
+                    <button (click)="onReset()" class="btn btn-outline-success ml-2 my-2">Reset</button>
                 </div>
             </div>
            
@@ -50,14 +54,14 @@
                      <app-product-item [product]="item"></app-product-item>
                 </div>
             </div>
-            <pagination 
-                [boundaryLinks]="true"
-                [totalItems]="77"
-                previousText="&lsaquo;"
-                nextText="&rsaquo;"
-                firstText="&laquo;"
-                lastText="&raquo;"> 
-            </pagination>
+             <div class="d-flex justify-content-center" *ngIf="totalCount > 0">
+                <app-pager
+                    [pager]="shopParams.pageSize"
+                    [totalCount]="totalCount"
+                    (pageChanged)="onPageChanged($event)">
+                ></app-pager>
+             </div>
+           
               
         </section>
     </div>
