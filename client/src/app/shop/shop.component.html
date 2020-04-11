@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+        <section class="col-3">
+            <h5 class="text-warning ml-3">Sort</h5>
+            <select class="custom-select mb-3" (change)="onSortSelected($event.target.value )">
+                <option *ngFor="let sort of sortOptions"
+                    [value]="sort.value"
+                >{{sort.name}} </option>
+            </select>
+            <h5 class="text-warning ml-3">Brands</h5>
+            <ul class="list-group my-3">
+                <li class="list-group-item" 
+                    *ngFor="let brand of brands"
+                    [class.active]="brand.id === this.brandIdSelected"
+                    [value]="brand.id"
+                    (click)="onBrandSelected(brand.id)"
+                >
+                    {{brand.name}}
+                </li>
+               
+              </ul> 
+              <h5 class="text-warning ml-3">Types</h5>
+              <ul class="list-group my-3">
+                <li class="list-group-item"
+                    *ngFor="let type of types"
+                    [class.active]="type.id === this.typeIdSelected"
+                    [value]="type.id"
+                    (click)="onTypeSelected(type.id)"
+                >
+                    {{type.name}}
+                </li>
+               
+              </ul>
+        </section>
+
+        <section class="col-9">
+            <div class="d-flex justify-content-between align-items-center pb-2">
+                <header>
+                    <span>Showing <strong>10</strong> of <strong>15</strong> Results</span>
+                </header>
+                <div class="form-inline mt-2">
+                    <input class="form-control mr-2" style="width:300px" placeholder="Search" type="text">
+                    <button class="btn btn-outline-primary my-2">Search</button>
+                    <button class="btn btn-outline-success ml-2 my-2">Reset</button>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-4 mb-4" *ngFor="let item of products">
+                     <app-product-item [product]="item"></app-product-item>
+                </div>
+            </div>
+            <pagination 
+                [boundaryLinks]="true"
+                [totalItems]="77"
+                previousText="&lsaquo;"
+                nextText="&rsaquo;"
+                firstText="&laquo;"
+                lastText="&raquo;"> 
+            </pagination>
+              
+        </section>
+    </div>
+</div>
