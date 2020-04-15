@@ -27,6 +27,7 @@
     "ngx-toastr": "^12.0.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "uuid": "^7.0.3",
     "xng-breadcrumb": "^5.0.1",
     "zone.js": "~0.10.2"
   },
