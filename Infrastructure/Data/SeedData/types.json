@@ -1,18 +1,18 @@
 [
   {
     "Id": 1,
-    "Name": "Boards"
+    "Name": "Shoes"
   },
   {
     "Id": 2,
-    "Name": "Hats"
+    "Name": "Rackets"
   },
   {
     "Id": 3,
-    "Name": "Boots"
+    "Name": "Football"
   },
   {
     "Id": 4,
-    "Name": "Gloves"
+    "Name": "Kit Bags"
   }
 ]
