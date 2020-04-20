@@ -33,7 +33,7 @@ namespace API
                 return ConnectionMultiplexer.Connect(config);
             });
             services.AddAppServices();
-            services.AddIdentityServices();
+            services.AddIdentityServices(_config);
             services.AddSwaggerDoc();
             services.AddCors(options =>
             {
@@ -58,6 +58,8 @@ namespace API
             app.UseStaticFiles();
 
             app.UseCors("CorsPolicy");
+            
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
