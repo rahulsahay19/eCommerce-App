@@ -11,6 +11,23 @@ namespace API.Extensions
             services.AddSwaggerGen(s =>
             {
                 s.SwaggerDoc("v1", new OpenApiInfo { Title = "Ecommerce API", Version = "v1" });
+                var securitySchema =  new OpenApiSecurityScheme
+                {
+                    Description = "JWT authentication scheme",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    Reference = new OpenApiReference
+                    {
+                        Type  = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                };
+                s.AddSecurityDefinition("Bearer", securitySchema);
+                var securityRequirement = new OpenApiSecurityRequirement { 
+                    {securitySchema, new[] { "Bearer"}}};
+                s.AddSecurityRequirement(securityRequirement);
             });
 
             return services;

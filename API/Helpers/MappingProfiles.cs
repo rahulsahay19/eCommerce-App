@@ -3,6 +3,7 @@ using AutoMapper;
 using Core.Entities;
 using Core.Entities.Identity;
 
+
 namespace API.Helpers
 {
     public class MappingProfiles : Profile
@@ -15,6 +16,8 @@ namespace API.Helpers
                 .ForMember(d => d.PictureUrl, o=> o.MapFrom<ProductUrlResolver>());
 
             CreateMap<Address, AddressDTO>().ReverseMap();
+            CreateMap<CustomerBasketDTO, CustomerBasket>();
+            CreateMap<BasketItemDTO, BasketItem>();
             
         }
     }
