@@ -14,6 +14,8 @@ const routes: Routes = [
   { path: 'basket', loadChildren: () => import('./basket/basket.module').then(mod => mod.BasketModule), data: {breadcrumb: 'Basket'} },
   // tslint:disable-next-line: max-line-length
   { path: 'checkout', loadChildren: () => import('./checkout/checkout.module').then(mod => mod.CheckoutModule), data: {breadcrumb: 'Checkout'} },
+  // tslint:disable-next-line: max-line-length
+  { path: 'account', loadChildren: () => import('./account/account.module').then(mod => mod.AccountModule), data: {breadcrumb: {skip: true }} },
   { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
 ];
 

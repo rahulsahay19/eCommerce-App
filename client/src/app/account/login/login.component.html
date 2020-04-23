@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center mt-5">
+    <div class="col-3">
+        <form [formGroup]="loginForm" (ngsubmit)="onSubmit()">
+            <div class="text-center mb-4">
+               <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+             </div>
+          
+            <div class="form-label-group">
+              <input formControlName="email" type="email" id="inputEmail" class="form-control" placeholder="Email address">
+              <label for="inputEmail">Email address</label>
+            </div>
+          
+            <div class="form-label-group">
+              <input formControlName="password" type="password" id="inputPassword" class="form-control" placeholder="Password">
+              <label for="inputPassword">Password</label>
+            </div>
+              
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <!-- <div class="d-flex align-center">
+                <a class="text-center mb-4" href="https://myview.rahulnivi.net" target="_blank">My View</a>
+            </div>
+             -->
+          </form>
+    </div>
+</div>
