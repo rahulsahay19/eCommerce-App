@@ -25,3 +25,29 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Setting up Project
+
+Run Infrastructure context with command 
+
+```dotnet ef migrations add OrderEntityAdded -p .\Infrastructure\ -s .\API\ -c EcommerceContext```
+
+- It should give below output
+
+![image](https://user-images.githubusercontent.com/3886381/80276150-3eb6ae80-8704-11ea-8661-b889357a71d0.png)
+
+- Then run dotnet watch run to apply migrations and check any error in case if any. This should create the database table ecommerce.db.
+
+- It created required tables as shown below.
+
+![image](https://user-images.githubusercontent.com/3886381/80276259-285d2280-8705-11ea-8565-407a6ce2a1a7.png)
+
+- For removing the migration, you can use following command. Make sure to execute this only if you want change any migration.
+
+```dotnet ef migrations remove -p .\Infrastructure\ -s .\API\ -c EcommerceContext```
+
+- If you applied ```dotnet watch run``` then consider updating the database rather removing as database changes applied already.
+
+dotnet ef database drop -p .\Infrastructure\ -s .\API\ -c EcommerceContext
+
+dotnet ef migrations add OrderEntityAdded -p .\Infrastructure\ -s .\API\ -o .\Infrastructure\Migrations\  -c EcommerceContext

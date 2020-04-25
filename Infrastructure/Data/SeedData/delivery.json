@@ -3,28 +3,28 @@
     "Id": 1,
     "ShortName": "Fedex",
     "Description": "Fastest delivery time",
-    "DeliveryTime": "1-2 Days",
-    "Price": 10
+    "DeliveryTime": "2 Days",
+    "Price": 350
   },
   {
     "Id": 2,
     "ShortName": "Blue Dart",
-    "Description": "Get it within 5 days",
-    "DeliveryTime": "2-5 Days",
-    "Price": 5
+    "Description": "Delivery within 5 days",
+    "DeliveryTime": "5 Days",
+    "Price": 250
   },
   {
     "Id": 3,
     "ShortName": "DTDC",
-    "Description": "Slower but cheap",
-    "DeliveryTime": "5-10 Days",
-    "Price": 2
+    "Description": "Delivery within 10 days",
+    "DeliveryTime": "10 Days",
+    "Price": 175
   },
   {
     "Id": 4,
     "ShortName": "First Flight",
-    "Description": "Free! You get what you pay for",
-    "DeliveryTime": "1-2 Weeks",
-    "Price": 0
+    "Description": "Delivery within 2 weeks",
+    "DeliveryTime": "2 Weeks",
+    "Price": 100
   }
 ]
