@@ -12,5 +12,10 @@ namespace Core.Interfaces
          Task<T> GetEntityWithSpec(ISpecification<T> spec);
          Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec);
          Task<int> CounAsync(ISpecification<T> spec);
+         // This is for tracking in memory in EF. Hence, kept synchronous.
+         void Add(T entity);
+         void Update(T entity);
+         void Delete(T entity);
+         
     }
 }

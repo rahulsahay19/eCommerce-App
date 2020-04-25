@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -33,6 +34,31 @@ namespace API.Controllers
             if(order == null) return BadRequest(new APIResponse(400, "Problem creating order"));
 
             return Ok(order);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IReadOnlyList<Order>>> GetOrdersForUser()
+        {
+            var email = HttpContext.User.RetrieveEmailFromPrincipal();
+            var orders = await _orderService.GetOrdersForUserAsync(email);
+
+            return Ok(orders);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Order>> GetOrderForUser(int id)
+        {
+            var email = HttpContext.User.RetrieveEmailFromPrincipal();
+            var order = await _orderService.GetOrderByIdAsync(id, email);
+            if(order == null) return NotFound(new APIResponse(404));
+
+            return order;
+        }
+
+        [HttpGet("deliveryMethods")]
+        public async Task<ActionResult<IReadOnlyList<DeliveryMethod>>> GetDeliveryMethods()
+        {
+            return Ok(await _orderService.GetDeliveryMethodsAsync());
         }
     }
 }
