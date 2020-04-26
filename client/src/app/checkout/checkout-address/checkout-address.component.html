@@ -1,0 +1,41 @@
+<div class="mt-4" [formGroup]="checkoutForm">
+    <div class="d-flex justify-content-between align-items-center">
+        <h4>Shipping Address</h4>
+        <button
+             (click)="saveUserAddress()"
+             [disabled]="!checkoutForm.get('addressForm').valid || !checkoutForm.get('addressForm').dirty"
+             class="btn btn-outline-success mb-3"
+             style="font-weight: bold">
+            Save as Primary Address
+        </button>
+    </div>
+    <div class="row" formGroupName="addressForm">
+        <div class="form-group col-6">
+            <app-text-input [label]="'First Name'" formControlName="firstName"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Last Name'" formControlName="lastName"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Street'" formControlName="street"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'City'" formControlName="city"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'State'" formControlName="state"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Zipcode'" formControlName="zipcode"></app-text-input>
+        </div>
+    </div>
+</div>
+
+<div class="float-none d-flex justify-content-between flex-column flex-lg-row mb-5">
+    <button class="btn btn-outline-primary" routerLink="/basket">
+        <i class="fa fa-angle-left"> Back to Basket</i>
+    </button>
+    <button class="btn btn-primary" cdkStepperNext>
+        Go to Delivery <i class="fa fa-angle-right"></i>
+    </button>
+</div>

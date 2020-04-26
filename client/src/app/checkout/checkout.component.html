@@ -1,3 +1,23 @@
 <div class="container mt-5">
-    <h1>Only authorized users allowed here!!!</h1>
+    <div class="row">
+        <div class="col-8">
+            <app-stepper [linearModeSelected]="false" #appStepper>
+                <cdk-step [label]="'Address'" [completed]="(checkoutForm.get('addressForm')).valid">
+                    <app-checkout-address [checkoutForm]="checkoutForm"></app-checkout-address>
+                </cdk-step>
+                <cdk-step [label]="'Delivery'" [completed]="(checkoutForm.get('deliveryForm')).valid">
+                    <app-checkout-delivery [checkoutForm]="checkoutForm"></app-checkout-delivery>
+                </cdk-step>
+                <cdk-step [label]="'Review'">
+                    <app-checkout-review></app-checkout-review>
+                </cdk-step>
+                <cdk-step [label]="'Payment'">
+                    <app-checkout-payment [checkoutForm]="checkoutForm"></app-checkout-payment>
+                </cdk-step>
+            </app-stepper>
+        </div>
+        <div class="col-4">
+           <app-order-totals></app-order-totals>
+        </div>
+    </div>
 </div>
