@@ -10,8 +10,8 @@ import { IOrder } from 'src/app/shared/models/order';
 export class CheckoutSuccessComponent implements OnInit {
   order: IOrder;
   constructor(private router: Router) {
-    const navigations = this.router.getCurrentNavigation();
-    const state = navigations && navigations.extras && navigations.extras.state;
+    const navigation = this.router.getCurrentNavigation();
+    const state = navigation && navigation.extras && navigation.extras.state;
 
     if (state) {
       this.order = state as IOrder;
