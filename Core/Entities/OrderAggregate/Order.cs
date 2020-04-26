@@ -27,6 +27,10 @@ namespace Core.Entities.OrderAggregate
         public decimal Subtotal { get; set; }
         public OrderStatus Status { get; set; } = OrderStatus.Pending;
         public string PaymentIntentId { get; set; }
+
+        // Automapper run this as well. It returns Get{{PropertyName}}
+        // Since, Total is property, hence it ran this code and populated the field.
+        // If naming would be something else, it won't work.
         public decimal GetTotal()
         {
             return Subtotal + DeliveryMethod.Price;
