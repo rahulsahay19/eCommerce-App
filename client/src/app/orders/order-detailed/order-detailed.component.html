@@ -1,0 +1,69 @@
+<div class="container mt-5">
+    <div class="row" *ngIf="order">
+      <div class="col-8">
+        <div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+              <tr>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="p-2 text-uppercase">Product</div>
+                </th>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="py-2 text-uppercase">Price</div>
+                </th>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="py-2 text-uppercase">Quantity</div>
+                </th>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="py-2 text-uppercase">Total</div>
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of order.orderItems">
+                <th scope="row">
+                  <div class="p-2">
+                    <img src="{{item.pictureUrl}}" alt="{{item.productName}}" class="img-fluid" style="max-height: 50px">
+                    <div class="ml-3 d-inline-block align-middle">
+                      <h5 class="mb-0">
+                        {{item.productName}}
+                      </h5>
+                    </div>
+                  </div>
+                </th>
+                <td class="align-middle"><strong>{{item.price | currency}}</strong></td>
+                <td class="align-middle">
+                  <span class="font-weight-bold px-2">{{item.quantity}}</span>
+                </td>
+                <td class="align-middle"><strong>{{item.price * item.quantity | currency}}</strong></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="bg-light px-4 py-3 text-uppercase font-weight-bold">Order summary</div>
+        {{order.total}}-{{order.subtotal}}-{{order.shippingPrice}}
+        <div class="p-4">
+          <ul class="list-unstyled mb-1">
+            <li class="d-flex justify-content-between py-3 border-bottom">
+              <strong class="text-muted">Order subtotal</strong>
+              <strong>{{order.subtotal | currency: 'INR'}}</strong>
+            </li>
+            <li class="d-flex justify-content-between py-3 border-bottom">
+              <strong class="text-muted">Shipping and handling</strong>
+              <strong>{{order.shippingPrice | currency: 'INR'}}</strong>
+            </li>
+            <li class="d-flex justify-content-between py-3 border-bottom">
+              <strong class="text-muted">Total</strong>
+              <strong>{{order.total | currency: 'INR'}}</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
