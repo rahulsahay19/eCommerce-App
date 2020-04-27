@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BasketService } from 'src/app/basket/basket.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-checkout-review',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutReviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private basketService: BasketService, private toastr: ToastrService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  createPaymentIntent() {
+    return this.basketService.createPaymentIntent()
+              .subscribe((response: any) => {
+                this.toastr.success('Payment intent created');
+              }, error => {
+                this.toastr.error(error.message);
+              });
   }
 
 }
