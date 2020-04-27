@@ -30,6 +30,7 @@ export class CheckoutPaymentComponent implements OnInit {
     this.checkoutService.createOrder(orderToCreate).subscribe((order: IOrder) => {
       this.toastr.success('Order created successfully');
       this.basketService.deleteLocalBasket(basket.id);
+      console.log(order);
       const navigationExtras: NavigationExtras = {state: order};
       this.router.navigate(['checkout/success'], navigationExtras);
     }, (error) => {
@@ -41,7 +42,7 @@ export class CheckoutPaymentComponent implements OnInit {
 private getOrderToCreate(basket: IBasket) {
     return {
       basketId: basket.id,
-      deliveryMethodId: +this.checkoutForm.get('deliveryForm').get('deliveryMethod').value, // for nuomer, + is prefixed
+      deliveryMethodId: +this.checkoutForm.get('deliveryForm').get('deliveryMethod').value, // for number, + is prefixed
       shipToAddress: this.checkoutForm.get('addressForm').value
     };
   }

@@ -45,7 +45,6 @@
       </div>
       <div class="col-4">
         <div class="bg-light px-4 py-3 text-uppercase font-weight-bold">Order summary</div>
-        {{order.total}}-{{order.subtotal}}-{{order.shippingPrice}}
         <div class="p-4">
           <ul class="list-unstyled mb-1">
             <li class="d-flex justify-content-between py-3 border-bottom">
@@ -54,7 +53,7 @@
             </li>
             <li class="d-flex justify-content-between py-3 border-bottom">
               <strong class="text-muted">Shipping and handling</strong>
-              <strong>{{order.shippingPrice | currency: 'INR'}}</strong>
+              <strong>{{order.total - order.subtotal | currency: 'INR'}}</strong>
             </li>
             <li class="d-flex justify-content-between py-3 border-bottom">
               <strong class="text-muted">Total</strong>

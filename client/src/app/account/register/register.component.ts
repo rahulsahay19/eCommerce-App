@@ -54,8 +54,7 @@ export class RegisterComponent implements OnInit {
             return res ? {emailExists : true } : null;
           })
         );
-    })
-    );
-  }
+    }));
+  };
 }
 }
