@@ -12,6 +12,8 @@ namespace API.Extensions
     {
         public static IServiceCollection AddAppServices(this IServiceCollection services)
         {
+            // caching needs to be singleton for any request
+            services.AddSingleton<IResponseCacheService, ResponseCacheService>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped(typeof(IEcommerceRepository<>), typeof(EcommerceRepository<>));
             services.AddScoped<IBasketRepository, BasketRepository>();
@@ -19,6 +21,8 @@ namespace API.Extensions
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            
+            
              services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.InvalidModelStateResponseFactory = acttionContext =>
