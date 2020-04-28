@@ -34,7 +34,9 @@ export class BasketService {
   setShippingPrice(deliveryMethod: IDeliveryMethod) {
     this.shipping = deliveryMethod.price;
     const basket = this.getCurrentBasketValue();
-    basket.deliveryMethodId = deliveryMethod.id;;
+    basket.deliveryMethodId = deliveryMethod.id;
+    basket.shippingPrice = deliveryMethod.price;
+    console.log('basket shipping price:- ', basket.shippingPrice);
     this.calculateTotals();
     this.setBasket(basket);
   }
@@ -44,7 +46,9 @@ export class BasketService {
       .pipe(
         map((basket: IBasket) => {
           this.basketSource.next(basket);
+          this.shipping = basket.shippingPrice;
           console.log(this.getCurrentBasketValue());
+          console.log('shipping price:-', this.shipping);
           this.calculateTotals();
         }));
   }
@@ -118,9 +122,9 @@ export class BasketService {
  private calculateTotals() {
    const basket = this.getCurrentBasketValue();
    const shipping = this.shipping;
-   const subTotal = basket.items.reduce((a, b) => (b.price * b.quantity) + a, 0);
-   const total = shipping + subTotal;
-   this.basketTotalSource.next({shipping, total, subTotal});
+   const subtotal = basket.items.reduce((a, b) => (b.price * b.quantity) + a, 0);
+   const total = shipping + subtotal;
+   this.basketTotalSource.next({shipping, total, subtotal});
  }
  private addOrUpdateItem(items: IBasketItem[], itemToAdd: IBasketItem, quantity: number): IBasketItem[] {
     const index = items.findIndex(i => i.id === itemToAdd.id);

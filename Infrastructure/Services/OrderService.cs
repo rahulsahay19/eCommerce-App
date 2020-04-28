@@ -12,11 +12,13 @@ namespace Infrastructure.Services
     {
         private readonly IBasketRepository _basketRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IPaymentService _paymentService;
 
-        public OrderService(IBasketRepository basketRepository, IUnitOfWork unitOfWork)
+        public OrderService(IBasketRepository basketRepository, IUnitOfWork unitOfWork, IPaymentService paymentService)
         {
-           _unitOfWork = unitOfWork;
-           _basketRepository = basketRepository;
+            _paymentService = paymentService;
+            _unitOfWork = unitOfWork;
+            _basketRepository = basketRepository;
         }
 
         public async Task<Order> CreateOrderAsync(string buyerEmail, int deliveryMethodId, string basketId, Address shippingAddress)
@@ -37,7 +39,20 @@ namespace Infrastructure.Services
 
             var deliveryMethod = await _unitOfWork.Repository<DeliveryMethod>().GetByIdAsync(deliveryMethodId);
             var subTotal = items.Sum(item => item.Price * item.Quantity);
-            var order = new Order(items, buyerEmail, shippingAddress, deliveryMethod, subTotal);
+
+            // check if order exists with payment intent id
+            var spec = new OrderByPaymentIntentIdWithItemsSpecification(basket.PaymentIntentId);
+            var existingOrder = await _unitOfWork.Repository<Order>().GetEntityWithSpec(spec);
+
+            //If we have existing order then delete it
+            if (existingOrder != null)
+            {
+                _unitOfWork.Repository<Order>().Delete(existingOrder);
+                await _paymentService.CreateOrUpdatePaymentIntent(basket.PaymentIntentId);
+            }
+
+            // create new order
+            var order = new Order(items, buyerEmail, shippingAddress, deliveryMethod, subTotal, basket.PaymentIntentId);
             _unitOfWork.Repository<Order>().Add(order);
 
             // saving to db
@@ -45,10 +60,7 @@ namespace Infrastructure.Services
             // Hence, no partial update.
             var result = await _unitOfWork.Complete();
 
-            if(result <= 0) return null;
-
-            // If Order is saved, then basket needs to be deleted as well
-            await _basketRepository.DeleteBasketAsync(basketId);
+            if (result <= 0) return null;
 
             return order;
         }
