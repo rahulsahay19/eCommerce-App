@@ -5,7 +5,7 @@
         </div>
         <div class="form-group col-6">
             <div #cardNumber class="form-control py-3">
-                <ng-container  *ngIf="cardErrors">
+                <ng-container *ngIf="cardErrors">
                     <span class="text-danger">{{cardErrors}}</span>
                 </ng-container>
             </div>
@@ -26,7 +26,9 @@
     <button class="btn btn-outline-primary" cdkStepperPrevious>
         <i class="fa fa-angle-left"> Back to Review</i>
     </button>
-    <button (click)="submitOrder()" class="btn btn-primary">
+    
+    <button [disabled]="loading || checkoutForm.get('paymentForm').invalid" (click)="submitOrder()" class="btn btn-primary">
         Submit Order <i class="fa fa-angle-right"></i>
+        <i *ngIf="loading" class="fa fa-spinner fa-spin"></i>
     </button>
 </div>

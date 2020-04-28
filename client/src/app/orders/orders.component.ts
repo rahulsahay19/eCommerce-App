@@ -14,12 +14,10 @@ export class OrdersComponent implements OnInit {
   constructor(private ordersService: OrdersService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
-  console.log('In orders component');
-    this.getOrders();
+     this.getOrders();
   }
 
   getOrders() {
-    console.log('inside method');
     this.ordersService.getOrdersForUser().subscribe((orders: IOrder[]) => {
       this.orders = orders;
       this.toastr.success('Orders successfully retrieved');
