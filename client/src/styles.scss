@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css";
+@import "../node_modules/bootswatch/dist/cosmo/bootstrap.min.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "../node_modules/ngx-toastr/toastr.css";
+
 .xng-breadcrumb-root {
     padding: 8px 16px;
     display: inline;
