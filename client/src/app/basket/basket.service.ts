@@ -26,7 +26,6 @@ export class BasketService {
       .pipe(
         map((basket: IBasket) => {
           this.basketSource.next(basket);
-          console.log(this.getCurrentBasketValue());
         })
       );
   }
@@ -36,7 +35,6 @@ export class BasketService {
     const basket = this.getCurrentBasketValue();
     basket.deliveryMethodId = deliveryMethod.id;
     basket.shippingPrice = deliveryMethod.price;
-    console.log('basket shipping price:- ', basket.shippingPrice);
     this.calculateTotals();
     this.setBasket(basket);
   }
@@ -47,8 +45,6 @@ export class BasketService {
         map((basket: IBasket) => {
           this.basketSource.next(basket);
           this.shipping = basket.shippingPrice;
-          console.log(this.getCurrentBasketValue());
-          console.log('shipping price:-', this.shipping);
           this.calculateTotals();
         }));
   }
@@ -58,7 +54,6 @@ export class BasketService {
       .subscribe((response: IBasket) => {
         // This will update the BehaviorSubject withnew value
         this.basketSource.next(response);
-        console.log(response);
         this.calculateTotals();
       }, (error) => console.log(error));
   }

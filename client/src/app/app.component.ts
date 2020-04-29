@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
    loadCurrentUser() {
      const token = localStorage.getItem('token');
      this.accountService.loadCurrentUser(token).subscribe(() => {
-        console.log('User loaded successfully');
       }, (err) => console.log(err));
    }
 
@@ -27,8 +26,7 @@ export class AppComponent implements OnInit {
     const basketId = localStorage.getItem('basket_id');
     if (basketId) {
       this.basketService.getBasket(basketId).subscribe(() => {
-       console.log('Initialized basket');
-      }, error => console.log(error));
+       }, error => console.log(error));
     }
    }
 }
