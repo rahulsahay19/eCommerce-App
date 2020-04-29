@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Adidas Quick Force Indoor Badminton Shoes",
+    "Name": "Badminton Shoes",
     "Description": "Designed for professional as well as amateur badminton players. These indoor shoes are crafted with synthetic upper that provides natural fit, while the EVA midsole provides lightweight cushioning. The shoes can be used for Badminton and Squash",
     "Price": 3500,
     "PictureUrl": "images/products/adidas_shoe-1.png",
@@ -8,7 +8,7 @@
     "ProductBrandId": 1
   },
   {
-    "Name": "Adidas Quick Force Indoor Badminton Shoes",
+    "Name": "Badminton Shoes",
     "Description": "Designed for professional as well as amateur badminton players. These indoor shoes are crafted with synthetic upper that provides natural fit, while the EVA midsole provides lightweight cushioning. The shoes can be used for Badminton and Squash",
     "Price": 3375,
     "PictureUrl": "images/products/adidas_shoe-2.png",
@@ -16,7 +16,7 @@
     "ProductBrandId": 1
   },
   {
-    "Name": "Adidas Quick Force Indoor Badminton Shoes",
+    "Name": "Badminton Shoes",
     "Description": "Designed for professional as well as amateur badminton players. These indoor shoes are crafted with synthetic upper that provides natural fit, while the EVA midsole provides lightweight cushioning. The shoes can be used for Badminton and Squash",
     "Price": 3375,
     "PictureUrl": "images/products/adidas_shoe-3.png",
@@ -24,7 +24,7 @@
     "ProductBrandId": 1
   },
   {
-    "Name": "Asics Gel Rocket 8 Indoor Court Shoes",
+    "Name": "Indoor Court Shoes",
     "Description": "The Asics Gel Rocket 8 Indoor Court Shoes (Orange/Silver) will keep you motivated and fired up to perform at your peak in volleyball, squash and other indoor sports. Beginner and intermediate players get cutting-edge technologies at an affordable price point.This entry level all-rounder has a durable upper and offers plenty of stability.",
     "Price": 4249,
     "PictureUrl": "images/products/asics_shoe-1.png",
@@ -32,7 +32,7 @@
     "ProductBrandId": 2
   },
   {
-    "Name": "Asics Gel Rocket 8 Indoor Court Shoes",
+    "Name": "Indoor Court Shoes",
     "Description": "The Asics Gel Rocket 8 Indoor Court Shoes (Orange/Silver) will keep you motivated and fired up to perform at your peak in volleyball, squash and other indoor sports. Beginner and intermediate players get cutting-edge technologies at an affordable price point.This entry level all-rounder has a durable upper and offers plenty of stability.",
     "Price": 3499,
     "PictureUrl": "images/products/asics_shoe-2.png",
@@ -40,7 +40,7 @@
     "ProductBrandId": 2
   },
   {
-    "Name": "Asics Gel Rocket 8 Indoor Court Shoes",
+    "Name": "Indoor Court Shoes",
     "Description": "The Asics Gel Rocket 8 Indoor Court Shoes (Orange/Silver) will keep you motivated and fired up to perform at your peak in volleyball, squash and other indoor sports. Beginner and intermediate players get cutting-edge technologies at an affordable price point.This entry level all-rounder has a durable upper and offers plenty of stability.",
     "Price": 3499,
     "PictureUrl": "images/products/asics_shoe-3.png",
@@ -48,7 +48,7 @@
     "ProductBrandId": 2
   },
   {
-    "Name": "Victor SHW503 F Badminton Shoes",
+    "Name": "Badminton Shoes",
     "Description": "PU Leather, Mesh,EVA, ENERGY MAX, Nylon sheet, Rubber",
     "Price": 2392,
     "PictureUrl": "images/products/victor_shoe-1.png",
@@ -56,7 +56,7 @@
     "ProductBrandId": 3
   },
   {
-    "Name": "Victor SHW503 F Badminton Shoes",
+    "Name": "Badminton Shoes",
     "Description": "PU Leather, Mesh,EVA, ENERGY MAX, Nylon sheet, Rubber",
     "Price": 3000,
     "PictureUrl": "images/products/victor_shoe-2.png",
@@ -64,7 +64,7 @@
     "ProductBrandId": 3
   },
   {
-    "Name": "YONEX Super Ace Light Badminton Shoes",
+    "Name": "Badminton Shoes",
     "Description": "Rule the game with Super Ace Light highlights Maximum shock absorption Quick compression recovery Its high resilience ensure YONEX insoles retain their shape longer Meticulously contoured for comfort Provides stability in the forefoot and toe areas technology.",
     "Price": 2590,
     "PictureUrl": "images/products/yonex_shoe-1.png",
@@ -72,7 +72,7 @@
     "ProductBrandId": 4
   },
   {
-    "Name": "YONEX Super Ace Light Badminton Shoes",
+    "Name": "Badminton Shoes",
     "Description": "Rule the game with Super Ace Light highlights Maximum shock absorption Quick compression recovery Its high resilience ensure YONEX insoles retain their shape longer Meticulously contoured for comfort Provides stability in the forefoot and toe areas technology.",
     "Price": 3500,
     "PictureUrl": "images/products/yonex_shoe-2.png",
@@ -80,7 +80,7 @@
     "ProductBrandId": 4
   },
   {
-    "Name": "YONEX Super Ace Light Badminton Shoes",
+    "Name": "Badminton Shoes",
     "Description": "Rule the game with Super Ace Light highlights Maximum shock absorption Quick compression recovery Its high resilience ensure YONEX insoles retain their shape longer Meticulously contoured for comfort Provides stability in the forefoot and toe areas technology.",
     "Price": 3700,
     "PictureUrl": "images/products/yonex_shoe-3.png",
@@ -88,7 +88,7 @@
     "ProductBrandId": 4
   },
   {
-    "Name": "Puma 19 FH Rubber Spike Cricket Shoes",
+    "Name": "Cricket Shoes",
     "Description": "With features and functions designed to withstand long hours out on the pitch, these one8 19 FH Rubber shoes have been engineered to offer comfort to cricketers",
     "Price": 4999,
     "PictureUrl": "images/products/puma_shoe-1.png",
@@ -96,7 +96,7 @@
     "ProductBrandId": 5
   },
   {
-    "Name": "Puma 19 FH Rubber Spike Cricket Shoes",
+    "Name": "Cricket Shoes",
     "Description": "With features and functions designed to withstand long hours out on the pitch, these one8 19 FH Rubber shoes have been engineered to offer comfort to cricketers.",
     "Price": 5200,
     "PictureUrl": "images/products/puma_shoe-2.png",
@@ -104,7 +104,7 @@
     "ProductBrandId": 5
   },
   {
-    "Name": "Puma 19 FH Rubber Spike Cricket Shoes",
+    "Name": "Cricket Shoes",
     "Description": "With features and functions designed to withstand long hours out on the pitch, these one8 19 FH Rubber shoes have been engineered to offer comfort to cricketers.",
     "Price": 5700,
     "PictureUrl": "images/products/puma_shoe-3.png",
@@ -112,7 +112,7 @@
     "ProductBrandId": 5
   },
   {
-    "Name": "Babolat Shadow Spirit Mens Badminton Shoes (Cloisonne/Strike)",
+    "Name": "Badminton Shoes",
     "Description": "Babolat Shadow Spirit Mens Badminton Shoes (Cloisonne/Strike)",
     "Price": 4125,
     "PictureUrl": "images/products/babolat_shoe-1.png",
@@ -120,7 +120,7 @@
     "ProductBrandId": 7
   },
   {
-    "Name": "Babolat Shadow Tour Mens Badminton Shoes (White/Blue)",
+    "Name": "Badminton Shoes",
     "Description": "Babolat Shadow Tour Mens Badminton Shoes (White/Blue)",
     "Price": 5249,
     "PictureUrl": "images/products/babolat_shoe-2.png",
@@ -128,7 +128,7 @@
     "ProductBrandId": 7
   },
   {
-    "Name": "Babolat Shadow Team Womens Badminton Shoes (Black/Peony)",
+    "Name": "Badminton Shoes",
     "Description": "Babolat Shadow Team Womens Badminton Shoes (Black/Peony)",
     "Price": 2999,
     "PictureUrl": "images/products/babolat_shoe-3.png",
@@ -136,7 +136,7 @@
     "ProductBrandId": 7
   },
   {
-    "Name": "Yonex VCORE Pro 100 A Tennis Racquet (270gm, Strung)",
+    "Name": "Tennis Racquet",
     "Description": "For offensive players looking to win with game-changing spin and power.",
     "Price": 6099,
     "PictureUrl": "images/products/yonex-racket-1.png",
@@ -144,7 +144,7 @@
     "ProductBrandId": 4
   },
   {
-    "Name": "Yonex VCORE Pro 100 A Tennis Racquet (290gm, Strung)",
+    "Name": "Tennis Racquet",
     "Description": "For offensive players looking to win with game-changing spin and power.",
     "Price": 6399,
     "PictureUrl": "images/products/yonex-racket-2.png",
@@ -152,7 +152,7 @@
     "ProductBrandId": 4
   },
   {
-    "Name": "Yonex VCORE Pro 100 2019 Tennis Racquet (280gm, Unstrung)",
+    "Name": "Tennis Racquet",
     "Description": "For offensive players looking to win with game-changing spin and power.",
     "Price": 13299,
     "PictureUrl": "images/products/yonex-racket-3.png",
@@ -160,7 +160,7 @@
     "ProductBrandId": 4
   },
   {
-    "Name": "Babolat Boost D Tennis Racquet (260gm, Strung)",
+    "Name": "Tennis Racquet",
     "Description": "Babolat Boost D Tennis Racquet (260gm, Strung)",
     "Price": 6999,
     "PictureUrl": "images/products/babolat-racket-1.png",
@@ -168,7 +168,7 @@
     "ProductBrandId": 7
   },
   {
-    "Name": "Buy Babolat Pure Aero 2019 Superlite Tennis Racquet (Unstrung, 255gm) and get Free Stringing with Babolat RPM Blast String!!",
+    "Name": "Tennis Racquet",
     "Description": "Babolat Pure Aero 2019 Superlite Tennis Racquet (Unstrung, 255gm)",
     "Price": 13000,
     "PictureUrl": "images/products/babolat-racket-2.png",
@@ -176,7 +176,7 @@
     "ProductBrandId": 7
   },
   {
-    "Name": "Babolat Pure Drive VS Tennis Racquet (Pair, 300gm, Strung)",
+    "Name": "Tennis Racquet",
     "Description": "Babolat Pure Drive VS Tennis Racquet (Pair, 300gm, Strung)",
     "Price": 34000,
     "PictureUrl": "images/products/babolat-racket-3.png",
@@ -184,7 +184,7 @@
     "ProductBrandId": 7
   },
   {
-    "Name": "Adidas FIFA World Cup 2018 OMB Football (White/Red/Black)",
+    "Name": "OMB Football",
     "Description": "Featuring an innovative surface panel design, this is the match ball used during football's FIFA World Cup™. Inspired by Russia's urban landscapes, a pixelated graphic pays tribute to the iconic Telstar ball. Its thermally bonded seamless surface designs.",
     "Price": 2499,
     "PictureUrl": "images/products/adidas_football-1.png",
@@ -192,7 +192,7 @@
     "ProductBrandId": 1
   },
   {
-    "Name": "Adidas FIFA World Cup 2018 OMB Football",
+    "Name": "OMB Football",
     "Description": "Featuring an innovative surface panel design, this is the match ball used during football's FIFA World Cup™. Inspired by Russia's urban landscapes, a pixelated graphic pays tribute to the iconic Telstar ball. Its thermally bonded seamless surface designs.",
     "Price": 3200,
     "PictureUrl": "images/products/adidas_football-2.png",
@@ -200,7 +200,7 @@
     "ProductBrandId": 1
   },
   {
-    "Name": "Adidas FIFA World Cup Top Glider Ball",
+    "Name": "Glider Ball",
     "Description": "Featuring an innovative surface panel design, this is the match ball used during football's FIFA World Cup™. Inspired by Russia's urban landscapes, a pixelated graphic pays tribute to the iconic Telstar ball. Its thermally bonded seamless surface designs.",
     "Price": 2499,
     "PictureUrl": "images/products/adidas_football-3.png",
@@ -208,7 +208,7 @@
     "ProductBrandId": 1
   },
   {
-    "Name": "Nike Pitch Premier League Football (Yellow/Purple)",
+    "Name": "Football",
     "Description": "Nike Pitch Premier League Football (Yellow/Purple) Ball is made with colorful graphics that stand out on the field for easier ball tracking. A machine-stitched TPU casing delivers great touch and durability during play. ",
     "Price": 1525,
     "PictureUrl": "images/products/Nike-Football-1.png",
@@ -216,7 +216,7 @@
     "ProductBrandId": 6
   },
   {
-    "Name": "Nike Manchester City Supporters Football (Berry)",
+    "Name": "Football",
     "Description": "Nike Manchester City Supporters Football (Berry) Ball is made with colorful graphics that stand out on the field for easier ball tracking. A machine-stitched TPU casing delivers great touch and durability during play. ",
     "Price": 1525,
     "PictureUrl": "images/products/Nike-Football-2.png",
@@ -224,7 +224,7 @@
     "ProductBrandId": 6
   },
   {
-    "Name": "Nike Mercurial Veer Football (White/Green/Black)",
+    "Name": "Football",
     "Description": "Nike Mercurial Veer Football (White/Green/Black) Ball is made with colorful graphics that stand out on the field for easier ball tracking. A machine-stitched TPU casing delivers great touch and durability during play. ",
     "Price": 1450,
     "PictureUrl": "images/products/Nike-Football-3.png",
@@ -232,7 +232,7 @@
     "ProductBrandId": 6
   },
   {
-    "Name": "Babolat Team Line Racket 12 Kit Bag (Fluorescent Red)",
+    "Name": "Line Racket",
     "Description": "The Babolat Team Line racquet bag is highly durable and fashionable, holding up to 12 racquets.",
     "Price": 4550,
     "PictureUrl": "images/products/babolat-kitback-1.png",
@@ -240,7 +240,7 @@
     "ProductBrandId": 7
   },
   {
-    "Name": "Babolat Pure Strike RH X12 Kit Bag (White/Red)",
+    "Name": "X12 Kit Bag",
     "Description": "Babolat Pure Strike 12-Pack Bag will effortlessly hold the majority of the rigging you should be fruitful on the court",
     "Price": 9799,
     "PictureUrl": "images/products/babolat-kitback-2.png",
@@ -248,7 +248,7 @@
     "ProductBrandId": 7
   },
   {
-    "Name": "Babolat Team Line 12 Racquet Kit Bag (Silver)",
+    "Name": "Line 12 Racquet Kit Bag",
     "Description": "Babolat Team Line 12 Racquet Kit Bag (Silver) for players who have tennis in their blood, Babolat brings you the Babolat Tennis Kit Bag India - Babolat Team Line Red 12 Pack.",
     "Price": 4550,
     "PictureUrl": "images/products/babolat-kitback-3.png",
@@ -256,7 +256,7 @@
     "ProductBrandId": 7
   },
   {
-    "Name": "Yonex SUNR 4826TK BT6-SR Badminton Kit Bag (Black/Red/White)",
+    "Name": "Badminton Kit Bag",
     "Description": "Yonex SUNR 4826TK BT6-SR Badminton Kit Bag (Black/Red/White)",
     "Price": 1999,
     "PictureUrl": "images/products/yonex-kitback-1.png",
@@ -264,7 +264,7 @@
     "ProductBrandId": 4
   },
   {
-    "Name": "Yonex SUNR LRB05 MS BT6 S Badminton Kit Bag (Blue/Red)",
+    "Name": "Badminton Kit Bag",
     "Description": "Yonex SUNR LRB05 MS BT6 S Badminton Kit Bag (Blue/Red)",
     "Price": 1499,
     "PictureUrl": "images/products/yonex-kitback-2.png",
@@ -272,7 +272,7 @@
     "ProductBrandId": 4
   },
   {
-    "Name": "Yonex SUNR LRB05 MS BT6 S Badminton Kit Bag (Grey/Orange)",
+    "Name": "Badminton Kit Bag",
     "Description": "Yonex SUNR LRB05 MS BT6 S Badminton Kit Bag (Grey/Orange)",
     "Price": 1499,
     "PictureUrl": "images/products/yonex-kitback-3.png",

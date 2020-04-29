@@ -22,14 +22,29 @@ namespace API
         {
             _config = config;
         }
+        
+        // .Net Core is convention based, hence make sure to stick to the naming convention
+        // Anything in the below method will come live, when we are running in dev mode
+        public void ConfigureDevelopmentServices(IServiceCollection services)
+        {
+            services.AddDbContext<EcommerceContext>(x => x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppIdentityDbContext>(x => x.UseSqlite(_config.GetConnectionString("IdentityConnection")));
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+            ConfigureServices(services);
+        }
+
+        public void ConfigureProductionServices(IServiceCollection services)
+        {
+            services.AddDbContext<EcommerceContext>(x => x.UseMySql(_config.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppIdentityDbContext>(x => x.UseMySql(_config.GetConnectionString("IdentityConnection")));
+
+            ConfigureServices(services);
+        }
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
-            services.AddDbContext<EcommerceContext>(x => x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
-            services.AddDbContext<AppIdentityDbContext>(x => x.UseSqlite(_config.GetConnectionString("IdentityConnection")));
+           
             services.AddSingleton<IConnectionMultiplexer>(c => {
                 var config = ConfigurationOptions.Parse(_config.GetConnectionString("Redis"), true);
                 return ConnectionMultiplexer.Connect(config);
