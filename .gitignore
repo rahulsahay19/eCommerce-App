@@ -5,7 +5,6 @@ appsettings.json
 *.rdb
 settings.json
 publish
-wwwroot
 .idea
 sports-center - Web Deploy.pubxml
 sports-center - Web Deploy.pubxml.user
