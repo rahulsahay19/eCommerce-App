@@ -13,21 +13,21 @@ namespace Infrastructure.Identity
             {
                 var user = new AppUser
                 {
-                    DisplayName = "Rahul Sahay",
-                    Email = "rahul@sahay.com",
-                    UserName = "rahul@sahay.com",
+                    DisplayName = "Test Account",
+                    Email = "test@test.com",
+                    UserName = "test@test.com",
                     Address = new Address
                     {
-                        FirstName = "Rahul",
-                        LastName = "Sahay",
+                        FirstName = "Test",
+                        LastName = "Account",
                         Street = "17th Street",
-                        City = "Bangalore",
-                        State = "Karnataka",
-                        Zipcode = "560012"
+                        City = "Ranchi",
+                        State = "Jharkhand",
+                        Zipcode = "834000"
                     }
                 };
 
-                await userManager.CreateAsync(user, "Pa$$w0rd");
+                await userManager.CreateAsync(user, "Password@1");
             }
         }
     }
