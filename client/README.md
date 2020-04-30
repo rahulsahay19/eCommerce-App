@@ -1,53 +1,81 @@
-# Client
+# Warning and Disclaimer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+Every effort applied to make this project complete and accurate to the topic, but no warranty is implied. Any implementation in this project are MY OWN and also borrowed from best practices segment. ALL content presented AS-IS, for learning purposes only. Author will not be liable for any loss or damages arising from the information presented in this project. This also involves stripe implementation. Just use test card as explained in readme not actual card. Incase, if any amount get deducted from actual card, author won't be responsible for any loss or damage. 
+
+## Client
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1. You can cd into client folder and do npm i to install the packages then ng serve.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project is built using asp.net core 3.1. you can cd into API directory and say dotnet restore and  then dotnet watch run.
 
-## Code scaffolding
+## Server Side Technologies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- .Net Core
+- Generic Repository Patterns
+- Unit of Work Pattern
+- Specification Pattern
+- Azure Redis Cache
+- Sqlite during devlopment
+- Mysql in Production
+- Swagger
+- Stripe Implementation
 
-## Build
+## Client Side Technologies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Angular 9
+- Bootstrap 4
+- ngx-bootstrap
+- Font Awesome
+- Lazy Loading
+- Caching
+- RXJS
+- Design Components
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## About the project
 
-## Running end-to-end tests
+This project is divided into branches. Master branch is development cut and production branch is production cut. In order to understand best practices and differences between them try comparing both.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Mobile UX
 
-## Further help
+Currently this project is not mobile friendly as I didn't get time to make it mobile compatible. In case, anyone interested, do submit PR.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## PR and Comments
 
-## Setting up Project
+I am open for extension of this project. Incase, if anyone wants to extend any feature, you can submit PR.
 
-Run Infrastructure context with command 
+## Stripe Test Cards
 
-```dotnet ef migrations add OrderEntityAdded -p .\Infrastructure\ -s .\API\ -c EcommerceContext```
+You can also follow docs here https://stripe.com/docs/testing
 
-- It should give below output
+![13th](https://user-images.githubusercontent.com/3886381/80680373-3f708b80-8adc-11ea-9fa6-f9cf557c96a1.png)
 
-![image](https://user-images.githubusercontent.com/3886381/80276150-3eb6ae80-8704-11ea-8661-b889357a71d0.png)
+## Glimpse of the working solution
 
-- Then run dotnet watch run to apply migrations and check any error in case if any. This should create the database table ecommerce.db.
+![1st](https://user-images.githubusercontent.com/3886381/80680036-b35e6400-8adb-11ea-8dc4-94ca34a1c222.png)
 
-- It created required tables as shown below.
+![2nd](https://user-images.githubusercontent.com/3886381/80680044-b5c0be00-8adb-11ea-8ea7-9d0e4318bbf6.png)
 
-![image](https://user-images.githubusercontent.com/3886381/80276259-285d2280-8705-11ea-8565-407a6ce2a1a7.png)
+![3rd](https://user-images.githubusercontent.com/3886381/80680050-b6f1eb00-8adb-11ea-8d47-a5d4f09fa7d2.png)
 
-- For removing the migration, you can use following command. Make sure to execute this only if you want change any migration.
+![4th](https://user-images.githubusercontent.com/3886381/80680053-b8231800-8adb-11ea-8be7-e0e3dba71dca.png)
 
-```dotnet ef migrations remove -p .\Infrastructure\ -s .\API\ -c EcommerceContext```
+![5th](https://user-images.githubusercontent.com/3886381/80680054-b8bbae80-8adb-11ea-95a2-5ec5e611691b.png)
 
-- If you applied ```dotnet watch run``` then consider updating the database rather removing as database changes applied already.
+![6th](https://user-images.githubusercontent.com/3886381/80680056-b8bbae80-8adb-11ea-83e8-52e552842f97.png)
 
-dotnet ef database drop -p .\Infrastructure\ -s .\API\ -c EcommerceContext
+![7th](https://user-images.githubusercontent.com/3886381/80680058-b9544500-8adb-11ea-8b6c-e4b274e65a9d.png)
 
-dotnet ef migrations add OrderEntityAdded -p .\Infrastructure\ -s .\API\ -o .\Infrastructure\Migrations\  -c EcommerceContext
+![8th](https://user-images.githubusercontent.com/3886381/80680060-b9ecdb80-8adb-11ea-9420-336fe8f76c12.png)
+
+![9th](https://user-images.githubusercontent.com/3886381/80680061-ba857200-8adb-11ea-9a2b-6a221e687a7d.png)
+
+![10th](https://user-images.githubusercontent.com/3886381/80680062-bb1e0880-8adb-11ea-9592-66c677b63702.png)
+
+![11th](https://user-images.githubusercontent.com/3886381/80680064-bb1e0880-8adb-11ea-963a-7a591aef9759.png)
+
+![12th](https://user-images.githubusercontent.com/3886381/80680067-bbb69f00-8adb-11ea-90c3-8682349cac0e.png)
+
+
